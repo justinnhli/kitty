@@ -684,7 +684,7 @@ Categories=System;TerminalEmulator;
             CFBundlePackageType='APPL',
             CFBundleSignature='????',
             CFBundleExecutable=appname,
-            LSMinimumSystemVersion='10.12.0',
+            LSMinimumSystemVersion='10.10.0',
             LSRequiresNativeExecution=True,
             NSAppleScriptEnabled=False,
             # Needed for dark mode in Mojave when linking against older SDKs
