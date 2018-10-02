@@ -15,10 +15,15 @@
 #include <objc/runtime.h>
 
 #if (MAC_OS_X_VERSION_MAX_ALLOWED < 101200)
-#define NSWindowStyleMaskResizable NSResizableWindowMask
-#define NSEventModifierFlagOption NSAlternateKeyMask
 #define NSEventModifierFlagCommand NSCommandKeyMask
 #define NSEventModifierFlagControl NSControlKeyMask
+#define NSEventModifierFlagOption NSAlternateKeyMask
+#define NSWindowStyleMaskBorderless NSBorderlessWindowMask
+#define NSWindowStyleMaskFullScreen NSFullScreenWindowMask
+#define NSWindowStyleMaskResizable NSResizableWindowMask
+#ifdef __OBJC__
+typedef NSUInteger NSWindowStyleMask;
+#endif
 #endif
 
 static NSMenuItem* title_menu = NULL;
